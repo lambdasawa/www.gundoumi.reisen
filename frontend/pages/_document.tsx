@@ -23,6 +23,11 @@ export default class MyDocument extends Document {
           />
           <script
             async
+            src="https://www.youtube.com/iframe_api"
+            charSet="utf-8"
+          ></script>
+          <script
+            async
             src="https://platform.twitter.com/widgets.js"
             charSet="utf-8"
           ></script>

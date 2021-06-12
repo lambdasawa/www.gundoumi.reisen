@@ -44,7 +44,12 @@ export default function MusicPlayer(props: { musics: Music[] }) {
 
   return (
     <Container>
-      <YouTubePlayer videoId={videoId} start={start} autoplay={autoplay} />
+      <YouTubePlayer
+        videoId={videoId}
+        start={start}
+        autoplay={autoplay}
+        onEnd={() => {}}
+      />
       <Container className={classes.controller}>
         <Paper>
           {musics.map((m) => (

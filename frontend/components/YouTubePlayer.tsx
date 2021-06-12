@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-
+import YouTube from "react-youtube";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -18,6 +18,7 @@ type Props = {
   videoId: string;
   start: number;
   autoplay: 0 | 1;
+  onEnd: () => void;
 };
 
 export default function YouTubePlayer(props: Props) {
@@ -26,28 +27,45 @@ export default function YouTubePlayer(props: Props) {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    const resize = () => {
-      const w = Math.min(window ? window.innerWidth : 0, 720);
-      const h = w * (9 / 16);
-      setWidth(w);
-      setHeight(h);
-    };
+  const resize = () => {
+    const w = Math.min(window ? window.innerWidth : 0, 720);
+    const h = w * (9 / 16);
+    setWidth(w);
+    setHeight(h);
+  };
 
+  useEffect(() => {
     window.onresize = resize;
 
     resize();
   });
 
+  if (!props.videoId) return <></>;
+
+  console.log({ props });
   return (
     <Grid container justify="center" className={classes.root}>
-      <iframe
-        id="ytplayer"
-        src={`https://www.youtube.com/embed/${props.videoId}?start=${props.start}&autoplay=${props.autoplay}`}
-        frameBorder="0"
-        width={width}
-        height={height}
-      ></iframe>
+      <YouTube
+        videoId={props.videoId}
+        opts={{
+          width: String(width),
+          height: String(height),
+          playerVars: {
+            start: props.start,
+            autoplay: props.autoplay,
+          },
+        }}
+        onReady={() => {}}
+        onPlay={() => {}}
+        onPause={() => {}}
+        onEnd={() => {
+          props.onEnd();
+        }}
+        onError={() => {}}
+        onStateChange={() => {}}
+        onPlaybackRateChange={() => {}}
+        onPlaybackQualityChange={() => {}}
+      />
     </Grid>
   );
 }
