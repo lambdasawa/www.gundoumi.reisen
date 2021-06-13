@@ -32,8 +32,13 @@ export default class MyDocument extends Document {
             charSet="utf-8"
           ></script>
 
-          <meta property="og:url" content="https://www.gundoumi.reisen" />
+          <meta property="og:url" content="https://www.gundoumi.reisen/sei/" />
+          <meta property="og:type" content="website" />
           <meta property="og:title" content="郡道美玲ファンサイト (非公式)" />
+          <meta
+            property="og:site_name"
+            content="郡道美玲ファンサイト (非公式)"
+          />
           <meta
             property="og:description"
             content="このサイトはにじさんじ所属バーチャルライバー郡道美玲さんの非公式ファンサイトです。"
@@ -42,6 +47,7 @@ export default class MyDocument extends Document {
             property="og:image"
             content="https://www.gundoumi.reisen/og.png"
           />
+          <meta property="og:locale" content="ja_JP" />
 
           <meta name="twitter:card" content="summary_large_image"></meta>
           <meta name="twitter:site" content="@lambdasawa"></meta>
