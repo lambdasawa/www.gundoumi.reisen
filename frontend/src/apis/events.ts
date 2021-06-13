@@ -132,7 +132,7 @@ export async function fetchEvents(): Promise<Event[]> {
       url: "https://twitter.com/g9v9g_mirei/status/1300268220646002688",
     },
     {
-      date: new Date(2020, 1 - 1, 17, 0, 0, 0, 0),
+      date: new Date(2020, 1 - 1, 17, 0, 0, 0, 1),
       text: "リクエストボイス発売 1",
       url: "https://twitter.com/g9v9g_mirei/status/1218082489949835264",
     },
@@ -197,7 +197,7 @@ export async function fetchEvents(): Promise<Event[]> {
       url: "https://www.youtube.com/watch?v=wvyKZYO6C_4",
     },
     {
-      date: new Date(2021, 1 - 1, 20, 0, 0, 0, 0),
+      date: new Date(2021, 1 - 1, 20, 0, 0, 0, 1),
       text: "新衣装お披露目 4",
       url: "https://www.youtube.com/watch?v=VWXbZNnvBdQ",
     },

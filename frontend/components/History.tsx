@@ -33,7 +33,7 @@ export default function Timeline(props: { events: Event[] }) {
       <TimelineUI>
         {events.map((event) => {
           return (
-            <TimelineItem key={event.url}>
+            <TimelineItem key={event.date.getTime()}>
               <TimelineOppositeContent>
                 <Typography color="textSecondary">
                   {event.date.toLocaleDateString()}
