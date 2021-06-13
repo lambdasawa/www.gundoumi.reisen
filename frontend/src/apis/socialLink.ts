@@ -62,6 +62,16 @@ export function fetchSocialLinks(): Promise<SocialLink[]> {
       icon: "twitter",
     },
     {
+      name: "マシュマロ",
+      url: "https://marshmallow-qa.com/g9v9g_mirei",
+      icon: "marshmallow",
+    },
+    {
+      name: "マシュマロ(サブ)",
+      url: "https://marshmallow-qa.com/kodaimailove",
+      icon: "marshmallow",
+    },
+    {
       name: "BOOTH",
       url: "https://booth.pm/ja/search/%E9%83%A1%E9%81%93%E7%BE%8E%E7%8E%B2",
       icon: "booth",

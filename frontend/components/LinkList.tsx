@@ -4,6 +4,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
 import RadioIcon from "@material-ui/icons/Radio";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -39,6 +40,8 @@ function buildIcon(icon?: string) {
       return <ShoppingCartIcon />;
     case "booth":
       return <ShoppingCartIcon />;
+    case "marshmallow":
+      return <LiveHelpIcon />;
     default:
       return <></>;
   }
