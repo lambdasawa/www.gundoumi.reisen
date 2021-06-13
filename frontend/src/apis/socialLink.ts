@@ -8,7 +8,7 @@ export function fetchSocialLinks(): Promise<SocialLink[]> {
   return Promise.resolve([
     {
       name: "YouTube",
-      url: "https://www.youtube.com/channel/UCeShTCVgZyq2lsBW9QwIJcw",
+      url: "https://www.youtube.com/channel/UCeShTCVgZyq2lsBW9QwIJcw?sub_confirmation=1",
       icon: "youtube",
     },
     {
@@ -18,27 +18,27 @@ export function fetchSocialLinks(): Promise<SocialLink[]> {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/g9v9g_mirei",
+      url: "https://twitter.com/intent/follow?screen_name=g9v9g_mirei",
       icon: "twitter",
     },
     {
       name: "Twitter (サブ)",
-      url: "https://twitter.com/kodaimailove",
+      url: "https://twitter.com/intent/follow?screen_name=kodaimailove",
       icon: "twitter",
     },
     {
       name: "ピン留めツイート",
-      url: "https://twitter.com/g9v9g_mirei/status/1214645894022197248",
+      url: "https://twitter.com/intent/retweet?tweet_id=1214645894022197248",
       icon: "twitter",
     },
     {
       name: "メンバーって何してるの？",
-      url: "https://twitter.com/g9v9g_mirei/status/1321789117315784704",
+      url: "https://twitter.com/intent/retweet?tweet_id=1321789117315784704",
       icon: "twitter",
     },
     {
       name: "衣装一覧",
-      url: "https://twitter.com/g9v9g_mirei/status/1356196131076775937",
+      url: "https://twitter.com/intent/retweet?tweet_id=1356196131076775937",
       icon: "twitter",
     },
     {
@@ -83,7 +83,7 @@ export function fetchSocialLinks(): Promise<SocialLink[]> {
     },
     {
       name: "YouTube (サブ)",
-      url: "https://www.youtube.com/channel/UCnlRcAY5g1ARYx-RZOmcwFA",
+      url: "https://www.youtube.com/channel/UCnlRcAY5g1ARYx-RZOmcwFA?sub_confirmation=1",
       icon: "youtube",
     },
   ]);

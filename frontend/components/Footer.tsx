@@ -24,7 +24,9 @@ export default function Footer() {
       <span>
         このサイトはにじさんじ所属バーチャルライバー郡道美玲さんの非公式ファンサイトです。お問い合わせは
       </span>
-      <Link href="https://twitter.com/lambdasawa">こちら</Link>
+      <Link href="https://twitter.com/messages/compose?recipient_id=897423873829879808">
+        こちら
+      </Link>
       <span>。</span>
     </div>
   );
