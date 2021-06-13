@@ -42,7 +42,6 @@ export default function YouTubePlayer(props: Props) {
 
   if (!props.videoId) return <></>;
 
-  console.log({ props });
   return (
     <Grid container justify="center" className={classes.root}>
       <YouTube
