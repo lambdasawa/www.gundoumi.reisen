@@ -27,6 +27,21 @@ export function fetchSocialLinks(): Promise<SocialLink[]> {
       icon: "twitter",
     },
     {
+      name: "ピン留めツイート",
+      url: "https://twitter.com/g9v9g_mirei/status/1214645894022197248",
+      icon: "twitter",
+    },
+    {
+      name: "メンバーって何してるの？",
+      url: "https://twitter.com/g9v9g_mirei/status/1321789117315784704",
+      icon: "twitter",
+    },
+    {
+      name: "衣装一覧",
+      url: "https://twitter.com/g9v9g_mirei/status/1356196131076775937",
+      icon: "twitter",
+    },
+    {
       name: "#教えて郡道先生",
       url: "https://twitter.com/hashtag/教えて郡道先生",
       icon: "twitter",
