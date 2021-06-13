@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       margin: "8px",
+      textTransform: "none",
     },
   })
 );
