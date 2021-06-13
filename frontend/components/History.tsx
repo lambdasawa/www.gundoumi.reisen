@@ -24,9 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function Timeline(props: { events: Event[] }) {
   const classes = useStyles();
 
-  const events = [...props.events]
-    .sort((a, b) => (a.date.getTime() < b.date.getTime() ? 1 : 0))
-    .reverse();
+  const events = [...props.events].sort((a, b) =>
+    a.date.getTime() < b.date.getTime() ? 1 : 0
+  );
 
   return (
     <Paper className={classes.root}>
