@@ -8,6 +8,12 @@ export type Material = {
 export function fetchMaterials(): Promise<Material[]> {
   return Promise.resolve([
     {
+      name: "ぐんかんファイティングポーズRB",
+      url: "https://twitter.com/g9v9g_mirei/status/1403923390080045059",
+      date: new Date(2021, 6 - 1, 13),
+      visibility: true,
+    },
+    {
       name: "ミミッキュGB",
       url: "https://www.youtube.com/watch?v=XBbDPYfghvQ",
       date: new Date(2021, 4 - 1, 8),
