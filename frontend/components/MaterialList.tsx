@@ -24,7 +24,7 @@ export default function MaterialList(props: { materials: Material[] }) {
     <List className={classes.root}>
       {props.materials
         .filter((m) => m.visibility)
-        .sort((m) => -m.date.getTime())
+        .sort((a, b) => b.date.getTime() - a.date.getTime())
         .map((m) => {
           return (
             <ListItem key={m.url}>
