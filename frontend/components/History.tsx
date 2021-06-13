@@ -24,10 +24,14 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function Timeline(props: { events: Event[] }) {
   const classes = useStyles();
 
+  const events = [...props.events]
+    .sort((a, b) => (a.date.getTime() < b.date.getTime() ? 1 : 0))
+    .reverse();
+
   return (
     <Paper className={classes.root}>
       <TimelineUI>
-        {props.events.map((event) => {
+        {events.map((event) => {
           return (
             <TimelineItem key={event.url}>
               <TimelineOppositeContent>
