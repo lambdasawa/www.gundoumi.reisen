@@ -57,6 +57,16 @@ export async function fetchEvents(): Promise<Event[]> {
       url: "https://twitter.com/g9v9g_mirei/status/1243841222126362625",
     },
     {
+      date: new Date(2019, 9 - 1, 25, 0, 0, 0, 0),
+      text: "一緒におサボりボイス発売",
+      url: "https://prtimes.jp/main/html/rd/p/000000089.000030865.html",
+    },
+    {
+      date: new Date(2019, 9 - 1, 25, 0, 0, 0, 1),
+      text: "のんだくれ解放ボイス発売",
+      url: "https://prtimes.jp/main/html/rd/p/000000089.000030865.html",
+    },
+    {
       date: new Date(2019, 10 - 1, 24, 0, 0, 0, 0),
       text: "ハロウィンボイス発売",
       url: "https://twitter.com/g9v9g_mirei/status/1187211769304907776",
