@@ -31,6 +31,17 @@ export default class MyDocument extends Document {
             src="https://platform.twitter.com/widgets.js"
             charSet="utf-8"
           ></script>
+
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@lambdasawa"></meta>
+          <meta
+            name="twitter:description"
+            content="郡道美玲ファンサイト (非公式)"
+          ></meta>
+          <meta
+            name="twitter:image:src"
+            content="https://www.gundoumi.reisen/og.png"
+          ></meta>
         </Head>
         <body>
           <Main />
