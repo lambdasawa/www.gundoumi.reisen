@@ -3,7 +3,7 @@ export function printAA() {
  ______________________________________________________
 /                                                      \\
 |   プルリクはいつでもウェルカムよぉ                             |
-|   https://github.com/lambdasawa/www.gundou-mi.reisen  |
+|   https://github.com/lambdasawa/www.gundoumi.reisen   |
 \\                                                      /
  ----          ----------------------------------------
      \\        /
@@ -65,7 +65,6 @@ export function printAA() {
   const style = "color: #a01887;";
 
   const lineCount = (text.match(/%c/g)?.length ?? 0) / 2;
-  console.log({ lineCount });
   const styles = [...Array(lineCount)].flatMap(() => [style, ""]);
 
   console.log(text, ...styles);
