@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const menu = [
   { href: "/sei/tv", name: "MireiTV" },
-  { href: "/sei/illust", name: "イラスト" },
+  // TODO: { href: "/sei/illust", name: "イラスト" },
   { href: "/sei/musics", name: "楽曲" },
   { href: "/sei/buttons", name: "美玲ボタン" },
   { href: "/sei/history", name: "年表" },
