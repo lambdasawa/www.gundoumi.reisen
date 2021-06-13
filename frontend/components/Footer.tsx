@@ -28,6 +28,7 @@ export default function Footer() {
         こちら
       </Link>
       <span>。</span>
+      <span>このサイトは Google Analytics を使用しています。</span>
     </div>
   );
 }

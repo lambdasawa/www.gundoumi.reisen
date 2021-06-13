@@ -32,6 +32,25 @@ export default class MyDocument extends Document {
             charSet="utf-8"
           ></script>
 
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+              ></script>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+                  `,
+                }}
+              />
+            </>
+          )}
+
           <meta property="og:url" content="https://www.gundoumi.reisen/sei/" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="郡道美玲ファンサイト (非公式)" />
