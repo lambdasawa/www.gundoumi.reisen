@@ -2,6 +2,7 @@ export type Event = {
   date: Date;
   text: string;
   url: string;
+  additionalProps?: Record<string, string>;
 };
 
 export async function fetchEvents(): Promise<Event[]> {
@@ -215,6 +216,22 @@ export async function fetchEvents(): Promise<Event[]> {
       date: new Date(2021, 6 - 1, 1, 0, 0, 0, 0),
       text: "郡道先生、それロンです！ 連載開始",
       url: "https://twitter.com/kbJB0DFyGn3avDp/status/1399511253983195136",
+    },
+    {
+      date: new Date(2019, 3 - 1, 11, 0, 0, 0, 0),
+      text: "にじさんじMIX UP!! #15 出演",
+      url: "https://www.youtube.com/watch?v=qyxN8ExYYOs",
+      additionalProps: {
+        afterTalk: "https://www.youtube.com/watch?v=4LHf3_6ivno",
+      },
+    },
+    {
+      date: new Date(2020, 1 - 1, 2, 0, 0, 0, 0),
+      text: "にじさんじ みっくすあっぷ Season2 新春SP #11 出演",
+      url: "https://www.youtube.com/watch?v=JNYypt85-jo",
+      additionalProps: {
+        afterTalk: "https://www.nicovideo.jp/watch/so36173332",
+      },
     },
   ]);
 }
