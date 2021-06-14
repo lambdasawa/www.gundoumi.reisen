@@ -129,7 +129,7 @@ const goods = [
     url: "https://shop.nijisanji.jp/s/niji/item/detail/dig-00050",
   },
   {
-    title: "常設ボイスグッズ",
+    title: "常設ボイス",
     elementName: "permanent-voice",
     url: "https://shop.nijisanji.jp/s/niji/item/detail/dig-00109",
   },
