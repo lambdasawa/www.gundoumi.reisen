@@ -12,6 +12,11 @@ export async function fetchEvents(): Promise<Event[]> {
       url: "https://prtimes.jp/main/html/rd/p/000000045.000030865.html",
     },
     {
+      date: new Date(2019, 1 - 1, 17, 16, 4, 0, 0),
+      text: "#はじめてのツイート",
+      url: "https://twitter.com/g9v9g_mirei/status/1085794891722969088",
+    },
+    {
       date: new Date(2019, 1 - 1, 17, 16, 25, 0, 0),
       text: "待て",
       url: "https://twitter.com/g9v9g_mirei/status/1085800298411483136",
