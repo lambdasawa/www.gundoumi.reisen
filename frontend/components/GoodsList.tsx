@@ -147,7 +147,14 @@ export default function GoodsList(props: {}) {
               <Typography variant="h5" className={classes.typography}>
                 {g.title}
               </Typography>
-              <Box>{goodsElements[g.elementName]}</Box>
+              <Box>
+                {goodsElements[g.elementName]}
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charSet="utf-8"
+                ></script>
+              </Box>
               <Button
                 variant="contained"
                 color="primary"
