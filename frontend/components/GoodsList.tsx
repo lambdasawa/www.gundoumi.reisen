@@ -5,7 +5,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import React from "react";
+import React, { useEffect } from "react";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -138,6 +138,19 @@ const goods = [
 export default function GoodsList(props: {}) {
   const classes = useStyles();
 
+  useEffect(() => {
+    const id = "twitter-widget-script";
+
+    document.getElementById(id)?.remove();
+
+    const element = document.createElement("script");
+    element.setAttribute("id", "twitter-widget-script");
+    element.setAttribute("async", "");
+    element.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    element.setAttribute("charset", "utf-8");
+    document.body.appendChild(element);
+  });
+
   return (
     <Container className={classes.root}>
       <Grid container>
@@ -147,14 +160,7 @@ export default function GoodsList(props: {}) {
               <Typography variant="h5" className={classes.typography}>
                 {g.title}
               </Typography>
-              <Box>
-                {goodsElements[g.elementName]}
-                <script
-                  async
-                  src="https://platform.twitter.com/widgets.js"
-                  charSet="utf-8"
-                ></script>
-              </Box>
+              <Box>{goodsElements[g.elementName]}</Box>
               <Button
                 variant="contained"
                 color="primary"
