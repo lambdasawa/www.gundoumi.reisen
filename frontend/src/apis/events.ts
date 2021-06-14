@@ -8,6 +8,33 @@ export type Event = {
 export async function fetchEvents(): Promise<Event[]> {
   return Promise.resolve([
     {
+      date: new Date(1994, 6 - 1, 14, 0, 0, 0, 0),
+      text: "誕生",
+      url: "https://www.youtube.com/watch?v=ayqBYZ_Vx5g",
+    },
+    {
+      date: new Date(2018, 11 - 1, 26, 23, 45, 0, 0),
+      text: "オーディション応募",
+      url: "https://www.youtube.com/watch?v=ayqBYZ_Vx5g",
+    },
+    {
+      date: new Date(2018, 12 - 1, 14, 0, 0, 0, 0),
+      text: "電話面接",
+      url: "https://www.youtube.com/watch?v=ayqBYZ_Vx5g",
+    },
+    {
+      date: new Date(2018, 12 - 1, 24, 0, 0, 0, 0),
+      text: "最終面接",
+      url: "https://www.youtube.com/watch?v=ayqBYZ_Vx5g",
+    },
+    // TODO: {
+    // TODO:   date: new Date(2020, 11 - 1, 9, 0, 0, 0, 0),
+    // TODO:   text: "田中理恵さんとツイキャスコラボ",
+    // TODO:   url: "https://twitcasting.tv/g9v9g_mirei/movie/650394451",
+    // TODO: },
+    // TODO: 郡道美玲の雀魂ハイスクール
+    // TODO: にじたま
+    {
       date: new Date(2019, 1 - 1, 17, 0, 0, 0, 0),
       text: "デビュー",
       url: "https://prtimes.jp/main/html/rd/p/000000045.000030865.html",
@@ -193,7 +220,7 @@ export async function fetchEvents(): Promise<Event[]> {
       url: "https://www.youtube.com/watch?v=1SKEJAAbctM",
     },
     {
-      date: new Date(2020, 2 - 1, 20, 0, 0, 0, 0),
+      date: new Date(2020, 2 - 1, 20, 21, 0, 0, 0),
       text: "3Dお披露目",
       url: "https://www.youtube.com/watch?v=4mI5madS3dw",
     },
