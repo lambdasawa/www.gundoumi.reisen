@@ -233,5 +233,10 @@ export async function fetchEvents(): Promise<Event[]> {
         afterTalk: "https://www.nicovideo.jp/watch/so36173332",
       },
     },
+    {
+      date: new Date(2020, 6 - 1, 1, 0, 0, 0, 0),
+      text: "Twitter サブアカ開設",
+      url: "https://twitter.com/kodaimailove/status/1267410976061616131",
+    },
   ]);
 }
