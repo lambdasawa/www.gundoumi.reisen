@@ -22,6 +22,11 @@ export async function fetchEvents(): Promise<Event[]> {
       url: "https://twitter.com/g9v9g_mirei/status/1085800298411483136",
     },
     {
+      date: new Date(2019, 1 - 1, 20, 0, 0, 0, 0),
+      text: "初配信",
+      url: "https://www.youtube.com/watch?v=k1NT9GoKzDA",
+    },
+    {
       date: new Date(2019, 2 - 1, 8, 0, 0, 0, 0),
       text: "バレンタインボイス発売",
       url: "https://prtimes.jp/main/html/rd/p/000000046.000030865.html",
