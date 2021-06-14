@@ -22,6 +22,7 @@ const menu = [
   // TODO: { href: "/sei/illust", name: "イラスト" },
   { href: "/sei/musics", name: "音楽" },
   { href: "/sei/buttons", name: "美玲ボタン" },
+  { href: "/sei/goods", name: "グッズ" },
   { href: "/sei/history", name: "年表" },
   { href: "/sei/links", name: "リンク集" },
   { href: "/sei/materials", name: "素材集" },
