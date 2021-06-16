@@ -2,6 +2,7 @@ import { ServerStyleSheets } from "@material-ui/core/styles";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import theme from "../src/theme";
+import Script from "next/script";
 
 // from https://github.com/mui-org/material-ui/tree/master/examples/nextjs-with-typescript
 
@@ -20,24 +21,18 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <script
-            async
+          <Script
             src="https://www.youtube.com/iframe_api"
+            strategy="beforeInteractive"
             charSet="utf-8"
-          ></script>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charSet="utf-8"
-          ></script>
+          />
 
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
             <>
-              <script
-                async
+              <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-              ></script>
-              <script
+              />
+              <Script
                 dangerouslySetInnerHTML={{
                   __html: `
                     window.dataLayer = window.dataLayer || [];
