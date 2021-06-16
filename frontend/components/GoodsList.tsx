@@ -155,7 +155,14 @@ export default function GoodsList(props: {}) {
     <Container className={classes.root}>
       <Grid container>
         {goods.map((g) => (
-          <Grid item sm={12} md={6} lg={3} className={classes.goods}>
+          <Grid
+            item
+            key={g.url}
+            sm={12}
+            md={6}
+            lg={3}
+            className={classes.goods}
+          >
             <Paper className={classes.paper}>
               <Typography variant="h5" className={classes.typography}>
                 {g.title}

@@ -21,7 +21,14 @@ export default function IllustrationsPage(props: { illusts: Illust[] }) {
   return (
     <Grid container className={classes.root}>
       {props.illusts.map(({ tweetUrl }) => (
-        <Grid lg={3} md={6} sm={12} item className={classes.item}>
+        <Grid
+          key={tweetUrl}
+          lg={3}
+          md={6}
+          sm={12}
+          item
+          className={classes.item}
+        >
           <blockquote className="twitter-tweet">
             <a href={tweetUrl}>{tweetUrl}</a>
           </blockquote>

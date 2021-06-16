@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 import React, { useEffect } from "react";
 
 export default function Home() {
@@ -8,5 +9,12 @@ export default function Home() {
     router.push("/sei/tv");
   });
 
-  return <div></div>;
+  return (
+    <>
+      <Head>
+        <title>郡道美玲ファンサイト</title>
+      </Head>
+      <div></div>
+    </>
+  );
 }

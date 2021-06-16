@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import useSWR from "swr";
 import MaterialList from "../../components/MaterialList";
@@ -9,5 +10,12 @@ export default function MaterialsPage() {
   if (error) return <div>failed to load</div>;
   if (!materials) return <div>loading...</div>;
 
-  return <MaterialList materials={materials} />;
+  return (
+    <>
+      <Head>
+        <title>郡道美玲ファンサイト</title>
+      </Head>
+      <MaterialList materials={materials} />
+    </>
+  );
 }

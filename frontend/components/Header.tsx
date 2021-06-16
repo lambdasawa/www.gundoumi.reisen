@@ -39,7 +39,7 @@ export default function Header() {
     setValue(
       location ? menu.findIndex(({ href }) => href === location.pathname) : 0
     );
-  });
+  }, []);
 
   return (
     <AppBar position="static" color="default">

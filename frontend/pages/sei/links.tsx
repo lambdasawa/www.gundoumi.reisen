@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import useSWR from "swr";
 import LinkList from "../../components/LinkList";
@@ -9,5 +10,12 @@ export default function LinksPage() {
   if (error) return <div>failed to load</div>;
   if (!socialLinks) return <div>loading...</div>;
 
-  return <LinkList socialLinks={socialLinks} />;
+  return (
+    <>
+      <Head>
+        <title>郡道美玲ファンサイト</title>
+      </Head>
+      <LinkList socialLinks={socialLinks} />
+    </>
+  );
 }

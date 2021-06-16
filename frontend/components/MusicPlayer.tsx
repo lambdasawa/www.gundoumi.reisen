@@ -41,7 +41,7 @@ export default function MusicPlayer(props: { musics: Music[] }) {
   useEffect(() => {
     if (videoId === "") setVideoId(musics ? musics[0].videoId : "");
     if (start === -1) setStart(musics ? musics[0].start : 0);
-  });
+  }, [musics, videoId, start]);
 
   return (
     <Container>
