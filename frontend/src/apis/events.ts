@@ -265,5 +265,10 @@ export async function fetchEvents(): Promise<Event[]> {
       text: "Twitter サブアカ開設",
       url: "https://twitter.com/kodaimailove/status/1267410976061616131",
     },
+    {
+      date: new Date(2021, 6 - 1, 16, 19, 50, 0, 0),
+      text: "Twitterアカウントが認証済みアカウントになる",
+      url: "https://twitter.com/g9v9g_mirei/status/1405115457653264385",
+    },
   ]);
 }
