@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -51,19 +52,24 @@ export default function TVPage() {
   if (!videoUrls) return <div>loading...</div>;
 
   return (
-    <Container className={classes.root}>
-      <YouTubePlayer
-        videoId={videoId}
-        start={0}
-        autoplay={1}
-        onEnd={() => setRandomVideoId()}
-      />
-      <Paper className={classes.help}>
-        <Typography>最近のアーカイブをランダムに再生します。</Typography>
-        <Typography>
-          最後まで再生が終了すると次のランダムなアーカイブが再生されます。
-        </Typography>
-      </Paper>
-    </Container>
+    <>
+      <Head>
+        <title>郡道美玲ファンサイト</title>
+      </Head>
+      <Container className={classes.root}>
+        <YouTubePlayer
+          videoId={videoId}
+          start={0}
+          autoplay={1}
+          onEnd={() => setRandomVideoId()}
+        />
+        <Paper className={classes.help}>
+          <Typography>最近のアーカイブをランダムに再生します。</Typography>
+          <Typography>
+            最後まで再生が終了すると次のランダムなアーカイブが再生されます。
+          </Typography>
+        </Paper>
+      </Container>
+    </>
   );
 }

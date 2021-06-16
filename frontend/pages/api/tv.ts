@@ -3,7 +3,7 @@ import * as Parser from "rss-parser";
 
 type Data = string[];
 
-export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const feed = await new Parser.default().parseURL(
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCeShTCVgZyq2lsBW9QwIJcw"
   );
@@ -16,3 +16,5 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         .filter((link): link is string => Boolean(link))
     );
 };
+
+export default handler;

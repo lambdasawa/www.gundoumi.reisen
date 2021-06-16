@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import React from "react";
 import useSWR from "swr";
@@ -26,5 +27,12 @@ export default function MusicsPage() {
   if (error) return <div>failed to load</div>;
   if (!musics) return <div>loading...</div>;
 
-  return <MusicPlayer musics={musics} />;
+  return (
+    <>
+      <Head>
+        <title>郡道美玲ファンサイト</title>
+      </Head>
+      <MusicPlayer musics={musics} />
+    </>
+  );
 }
