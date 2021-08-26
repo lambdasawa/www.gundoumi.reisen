@@ -37,5 +37,11 @@ export async function fetchMusics(): Promise<Music[]> {
       start: 0,
       date: new Date(2021, 2 - 1, 3),
     },
+    {
+      title: "すーぱー☆あふぇくしょん",
+      videoId: "-rLmtgLaQZk",
+      start: 0,
+      date: new Date(2021, 8 - 1, 26),
+    },
   ]);
 }
