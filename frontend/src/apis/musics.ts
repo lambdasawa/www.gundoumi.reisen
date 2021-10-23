@@ -43,5 +43,11 @@ export async function fetchMusics(): Promise<Music[]> {
       start: 0,
       date: new Date(2021, 8 - 1, 26),
     },
+    {
+      title: "Tulip",
+      videoId: "jHpG_X8GAkI",
+      start: 0,
+      date: new Date(2021, 10 - 1, 23),
+    },
   ]);
 }
