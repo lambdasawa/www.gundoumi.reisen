@@ -49,5 +49,11 @@ export async function fetchMusics(): Promise<Music[]> {
       start: 0,
       date: new Date(2021, 10 - 1, 23),
     },
+    {
+      title: "ロマンスの神様",
+      videoId: "IEqdL7tSwTw",
+      start: 0,
+      date: new Date(2022, 1 - 1, 17),
+    },
   ]);
 }

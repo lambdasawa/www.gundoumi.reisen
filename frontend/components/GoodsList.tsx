@@ -28,6 +28,32 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const goodsElements: Record<string, JSX.Element> = {
+  "line-stamp": (
+    <blockquote className="twitter-tweet">
+      <p lang="ja" dir="ltr">
+        ✌️大事！✌️
+        <br />
+        <br />
+        LINEスタンプが発売開始されました〜！！！！！！！！！⸜(* ॑꒳ ॑* )⸝⋆*
+        <br />
+        <br />
+        全20種類！50コイン！
+        <br />
+        超日常使いしやすい可愛いスタンプなので是非是非手に入れてね🥳🥳🥳
+        <br />
+        <br />
+        イラスト→山吹色先生<a href="https://twitter.com/bukiiro?ref_src=twsrc%5Etfw">@bukiiro</a> <br />
+        <br />
+        [郡道美玲 日常スタンプ]<a href="https://t.co/kPFeN3czCb">https://t.co/kPFeN3czCb</a>
+        <a href="https://twitter.com/hashtag/%E9%83%A1%E9%81%933%E5%91%A8%E5%B9%B4?src=hash&amp;ref_src=twsrc%5Etfw">
+          #郡道3周年
+        </a>{" "}
+        <a href="https://t.co/cD9dXB0YyA">pic.twitter.com/cD9dXB0YyA</a>
+      </p>
+      &mdash; 郡道美玲🐽活動3周年 (@g9v9g_mirei){" "}
+      <a href="https://twitter.com/g9v9g_mirei/status/1482978602123939842?ref_src=twsrc%5Etfw">January 17, 2022</a>
+    </blockquote>
+  ),
   "individual-goods": (
     <blockquote className="twitter-tweet">
       <p lang="ja" dir="ltr">
@@ -41,9 +67,7 @@ const goodsElements: Record<string, JSX.Element> = {
         <a href="https://t.co/pgbP4i6sqx">pic.twitter.com/pgbP4i6sqx</a>
       </p>
       &mdash; 郡道美玲🐽本日誕生日！ (@g9v9g_mirei){" "}
-      <a href="https://twitter.com/g9v9g_mirei/status/1360883439616942080?ref_src=twsrc%5Etfw">
-        February 14, 2021
-      </a>
+      <a href="https://twitter.com/g9v9g_mirei/status/1360883439616942080?ref_src=twsrc%5Etfw">February 14, 2021</a>
     </blockquote>
   ),
   "acrylic-stand": (
@@ -54,8 +78,7 @@ const goodsElements: Record<string, JSX.Element> = {
         <br />
         10/15(木)12:00より、郡道美玲、御伽原江良、森中花咲、童田明治
         <br />
-        4名の新ビジュアルを使用した
-        大判アクリルスタンド、ランダム缶バッジの販売が決定いたしました！
+        4名の新ビジュアルを使用した 大判アクリルスタンド、ランダム缶バッジの販売が決定いたしました！
         <br />
         <br />
         詳細はこちら！▽
@@ -66,9 +89,7 @@ const goodsElements: Record<string, JSX.Element> = {
         <a href="https://t.co/hvmyfS47WO">pic.twitter.com/hvmyfS47WO</a>
       </p>
       &mdash; にじさんじ公式🌈🕒 (@nijisanji_app){" "}
-      <a href="https://twitter.com/nijisanji_app/status/1315850302508081152?ref_src=twsrc%5Etfw">
-        October 13, 2020
-      </a>
+      <a href="https://twitter.com/nijisanji_app/status/1315850302508081152?ref_src=twsrc%5Etfw">October 13, 2020</a>
     </blockquote>
   ),
   "osanpo-voice": (
@@ -83,9 +104,7 @@ const goodsElements: Record<string, JSX.Element> = {
         <a href="https://t.co/ZRjaCcX92n">https://t.co/ZRjaCcX92n</a>
       </p>
       &mdash; にじさんじ公式🌈🕒 (@nijisanji_app){" "}
-      <a href="https://twitter.com/nijisanji_app/status/1184031460006731777?ref_src=twsrc%5Etfw">
-        October 15, 2019
-      </a>
+      <a href="https://twitter.com/nijisanji_app/status/1184031460006731777?ref_src=twsrc%5Etfw">October 15, 2019</a>
     </blockquote>
   ),
   "permanent-voice": (
@@ -104,15 +123,18 @@ const goodsElements: Record<string, JSX.Element> = {
         <a href="https://t.co/8lza20LncG">pic.twitter.com/8lza20LncG</a>
       </p>
       &mdash; にじさんじ公式🌈🕒 (@nijisanji_app){" "}
-      <a href="https://twitter.com/nijisanji_app/status/1305401022836342785?ref_src=twsrc%5Etfw">
-        September 14, 2020
-      </a>
+      <a href="https://twitter.com/nijisanji_app/status/1305401022836342785?ref_src=twsrc%5Etfw">September 14, 2020</a>
     </blockquote>
   ),
 };
 
 // TODO: fetch from API
 const goods = [
+  {
+    title: "LINEスタンプ",
+    elementName: "line-stamp",
+    url: "https://store.line.me/stickershop/product/18025992/ja",
+  },
   {
     title: "個人グッズ",
     elementName: "individual-goods",
@@ -155,25 +177,13 @@ export default function GoodsList(props: {}) {
     <Container className={classes.root}>
       <Grid container>
         {goods.map((g) => (
-          <Grid
-            item
-            key={g.url}
-            sm={12}
-            md={6}
-            lg={3}
-            className={classes.goods}
-          >
+          <Grid item key={g.url} sm={12} md={6} lg={3} className={classes.goods}>
             <Paper className={classes.paper}>
               <Typography variant="h5" className={classes.typography}>
                 {g.title}
               </Typography>
               <Box>{goodsElements[g.elementName]}</Box>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-                href={g.url}
-              >
+              <Button variant="contained" color="primary" className={classes.button} href={g.url}>
                 購入はこちらから
               </Button>
             </Paper>
