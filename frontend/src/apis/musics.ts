@@ -2,6 +2,7 @@ export type Music = {
   title: string;
   videoId: string;
   start: number;
+  end?: number;
   date: Date;
 };
 
@@ -54,6 +55,41 @@ export async function fetchMusics(): Promise<Music[]> {
       videoId: "IEqdL7tSwTw",
       start: 0,
       date: new Date(2022, 1 - 1, 17),
+    },
+    {
+      title: "ロキ",
+      videoId: "zoynMroawZw",
+      start: 15 * 60 + 40,
+      end: 19 * 60 + 27,
+      date: new Date(2021, 12 - 1, 31),
+    },
+    {
+      title: "DANZEN! ふたりはプリキュア",
+      videoId: "Rr1nWSFB75Q",
+      start: 2 * 60 + 10,
+      end: 3 * 60 + 25,
+      date: new Date(2022, 1 - 1, 20),
+    },
+    {
+      title: "ゆりゆららららゆるゆら大事件",
+      videoId: "Rr1nWSFB75Q",
+      start: 6 * 60 + 12,
+      end: 9 * 60 + 56,
+      date: new Date(2022, 1 - 1, 20),
+    },
+    {
+      title: "Climax Jump",
+      videoId: "Rr1nWSFB75Q",
+      start: 13 * 60 + 0,
+      end: 16 * 60 + 59,
+      date: new Date(2022, 1 - 1, 20),
+    },
+    {
+      title: "ファンサ",
+      videoId: "Rr1nWSFB75Q",
+      start: 19 * 60 + 39,
+      end: 23 * 60 + 43,
+      date: new Date(2022, 1 - 1, 20),
     },
   ]);
 }

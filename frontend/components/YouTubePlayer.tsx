@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
 type Props = {
   videoId: string;
   start: number;
+  end?: number;
   autoplay: 0 | 1;
   onEnd: () => void;
 };
@@ -51,6 +52,7 @@ export default function YouTubePlayer(props: Props) {
           height: String(height),
           playerVars: {
             start: props.start,
+            end: props.end,
             autoplay: props.autoplay,
           },
         }}

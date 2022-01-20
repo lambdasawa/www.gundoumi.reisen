@@ -30,11 +30,13 @@ export default function MusicPlayer(props: { musics: Music[] }) {
 
   const [videoId, setVideoId] = useState("");
   const [start, setStart] = useState(-1);
+  const [end, setEnd] = useState<number | undefined>(undefined);
   const [autoplay, setAutoplay] = useState<0 | 1>(0);
 
   const play = (m: Music) => {
     setVideoId(m.videoId);
     setStart(m.start);
+    if (m.end) setEnd(m.end);
     setAutoplay(1);
   };
 
@@ -45,21 +47,11 @@ export default function MusicPlayer(props: { musics: Music[] }) {
 
   return (
     <Container>
-      <YouTubePlayer
-        videoId={videoId}
-        start={start}
-        autoplay={autoplay}
-        onEnd={() => {}}
-      />
+      <YouTubePlayer videoId={videoId} start={start} end={end} autoplay={autoplay} onEnd={() => {}} />
       <Container className={classes.controller}>
         <Paper>
           {musics.map((m) => (
-            <Button
-              key={m.videoId}
-              variant="contained"
-              onClick={() => play(m)}
-              className={classes.button}
-            >
+            <Button key={m.videoId} variant="contained" onClick={() => play(m)} className={classes.button}>
               {m.title}
             </Button>
           ))}
