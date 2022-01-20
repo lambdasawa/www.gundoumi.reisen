@@ -71,7 +71,7 @@ export async function fetchMusics(): Promise<Music[]> {
       date: new Date(2022, 1 - 1, 20),
     },
     {
-      title: "ゆりゆららららゆるゆら大事件",
+      title: "ゆりゆららららゆるゆり大事件",
       videoId: "Rr1nWSFB75Q",
       start: 6 * 60 + 12,
       end: 9 * 60 + 56,
